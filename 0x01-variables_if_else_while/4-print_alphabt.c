@@ -16,7 +16,6 @@ for (n = 'a'; n <= 'z'; n++)
 {
 if (n == 'e' || n == 'q')
 {
-n++;
 continue;
 }
 putchar(n);

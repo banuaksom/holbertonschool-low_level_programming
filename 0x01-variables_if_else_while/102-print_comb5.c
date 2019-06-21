@@ -30,7 +30,7 @@ putchar(n2 + 48);
 putchar(' ');
 putchar(n3 + 48);
 putchar(n4 + 48);
-if (n1 != '9' || n2 != '8' || n3 != '9' || n4 != '9')
+if (n1 != 9 || n2 != 8 || n3 != 9 || n4 != 9)
 {
 putchar(',');
 putchar(' ');

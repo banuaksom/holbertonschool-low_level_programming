@@ -7,14 +7,11 @@
 
 int main(void)
 {
-	char word[] = "Holberton";
-	int i;
+	char *s = "Holberton\n";
 
-
-	for (i = 0; word[i] != '\0'; i++)
+	while (*s)
 	{
-		_putchar(word[i]);
+		_putchar(*s++);
 	}
-	_putchar('\n');
 	return (0);
 }

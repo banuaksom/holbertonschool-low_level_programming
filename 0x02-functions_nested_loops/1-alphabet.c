@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * main - Entry point
+ * print_alphabet - ptints the alphabet, in lowercase, followed by a new line
  *
  * Return: Always 0 (Success)
  */

@@ -8,13 +8,10 @@
 void print_most_numbers(void)
 {
 	int i;
+	char s[] = "01356789\n";
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (i != 2 || i != 4)
-		{
-			_putchar(i + 48);
-		}
+		_putchar(s[i]);
 	}
-	_putchar('\n');
 }

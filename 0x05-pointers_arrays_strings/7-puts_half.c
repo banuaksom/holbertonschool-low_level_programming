@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * _puts -  prints a string to stdout
- * @*str: pointer to string
+ * puts_half -  prints a string to stdout
+ * @str: pointer to string
  */
 
 void puts_half(char *str)
@@ -14,15 +14,15 @@ void puts_half(char *str)
 		length++;
 	}
 
-	if (length % 2 == 0) 
+	if (length % 2 == 0)
+
 	{
 		for (n = length / 2; str[n] != '\0'; n++)
 		{
 			_putchar(str[n]);
 		}
 	}
-	
-	else 
+	else
 	{
 		for (n = (length - 1) / 2; str[n] != '\0'; n++)
 		{
@@ -30,4 +30,5 @@ void puts_half(char *str)
 		}
 	}
 	_putchar('\n');
+
 }

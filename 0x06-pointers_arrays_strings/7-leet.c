@@ -8,20 +8,24 @@
 
 char *leet(char *s)
 {
+	int i;
+	char matching[127];
 	char *b = s;
-	char encode[15] = {'a', 'A', '4', 'e', 'E', '3',
-		'o', 'O', '0', 't', 'T', '7', 'l', 'L', '1'
-	};
-	char *e = encode;
+
+	for (i = 0; i < 127; i++)
+	{
+		matching[i] = i;
+	}
+	matching['a'] = matching['A'] = '4';
+	matching['e'] = matching['E'] = '3';
+	matching['o'] = matching['O'] = '0';
+	matching['t'] = matching['T'] = '7';
+	matching['l'] = matching['L'] = '7';
 
 	for ( ; *s != '\0'; s++)
 	{
-		for ( ; *e != '\0'; e = e + 3)
-		{
-			if (*s == *e || *s == *(e + 1))
-				*s = *(e + 2);
-		}
-		e = encode;
+		int encode = *s;
+		*s = matching[encode];
 	}
 	s = b;
 	return (s);

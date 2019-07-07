@@ -8,69 +8,28 @@
 char *rot13(char *s)
 {
 	int i;
-	char matching[256];
+	char alpha[52] = {'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E',
+		'f', 'F', 'g', 'G', 'h', 'H', 'i', 'I', 'j', 'J', 'k', 'K',
+		'l', 'L', 'm', 'M', 'n', 'N', 'o', 'O', 'p', 'P', 'q', 'Q',
+		'r', 'R', 's', 'S', 't', 'T', 'u', 'U', 'v', 'V', 'w', 'W',
+		'x', 'X', 'y', 'Y', 'z', 'Z'};
+	char match[52] = {'n', 'N', 'o', 'O', 'p', 'P', 'q', 'Q', 'r', 'R',
+		's', 'S', 't', 'T', 'u', 'U', 'v', 'V', 'w', 'W', 'x', 'X',
+		'y', 'Y', 'z', 'Z', 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D',
+		'e', 'E', 'f', 'F', 'g', 'G', 'h', 'H', 'i', 'I', 'j', 'J',
+		'k', 'K', 'l', 'L', 'm', 'M'};
 	char *b = s;
 
-	for (i = 0; i < 256; i++)
+	for ( ; *b != '\0'; b++)
 	{
-		matching[i] = i;
+		for (i = 0; i < 53; i++)
+		{
+			if (*b == alpha[i])
+			{
+				*b = match[i];
+				break;
+			}
+		}
 	}
-	matching['a'] = 'n';
-	matching['A'] = 'N';
-	matching['b'] = 'o';
-	matching['B'] = 'O';
-	matching['c'] = 'p';
-	matching['C'] = 'P';
-	matching['d'] = 'q';
-	matching['D'] = 'Q';
-	matching['e'] = 'r';
-	matching['E'] = 'R';
-	matching['f'] = 's';
-	matching['F'] = 'S';
-	matching['g'] = 't';
-	matching['G'] = 'T';
-	matching['h'] = 'u';
-	matching['H'] = 'U';
-	matching['i'] = 'v';
-	matching['I'] = 'V';
-	matching['j'] = 'w';
-	matching['J'] = 'W';
-	matching['k'] = 'x';
-	matching['K'] = 'X';
-	matching['l'] = 'y';
-	matching['L'] = 'Y';
-	matching['m'] = 'z';
-	matching['M'] = 'Z';
-	matching['n'] = 'a';
-	matching['N'] = 'A';
-	matching['o'] = 'b';
-	matching['O'] = 'B';
-	matching['p'] = 'c';
-	matching['P'] = 'C';
-	matching['q'] = 'd';
-	matching['Q'] = 'D';
-	matching['r'] = 'e';
-	matching['R'] = 'E';
-	matching['s'] = 'f';
-	matching['S'] = 'F';
-	matching['t'] = 'g';
-	matching['T'] = 'G';
-	matching['u'] = 'h';
-	matching['U'] = 'H';
-	matching['v'] = 'i';
-	matching['V'] = 'I';
-	matching['w'] = 'j';
-	matching['W'] = 'J';
-	matching['x'] = 'k';
-	matching['X'] = 'K';
-	matching['y'] = 'l';
-	matching['Y'] = 'L';
-	matching['z'] = 'm';
-	matching['Z'] = 'M';
-	for ( ; *s != '\0'; s++)
-	{
-		*s = matching[(int)*s];
-	}
-	s = b;
 	return (s);
 }

@@ -13,6 +13,7 @@ char *leet(char *s)
 		'o', 'O', '0', 't', 'T', '7', 'l', 'L', '1'
 	};
 	char *e = encode;
+
 	for ( ; *s != '\0'; s++)
 	{
 		for ( ; *e != '\0'; e = e + 3)

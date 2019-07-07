@@ -20,7 +20,7 @@ char *leet(char *s)
 	matching['e'] = matching['E'] = '3';
 	matching['o'] = matching['O'] = '0';
 	matching['t'] = matching['T'] = '7';
-	matching['l'] = matching['L'] = '7';
+	matching['l'] = matching['L'] = '1';
 
 	for ( ; *s != '\0'; s++)
 	{

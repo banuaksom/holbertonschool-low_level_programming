@@ -9,10 +9,10 @@
 char *leet(char *s)
 {
 	int i;
-	char matching[127];
+	char matching[256];
 	char *b = s;
 
-	for (i = 0; i < 127; i++)
+	for (i = 0; i < 256; i++)
 	{
 		matching[i] = i;
 	}

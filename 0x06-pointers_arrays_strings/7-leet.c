@@ -13,16 +13,14 @@ char *leet(char *s)
 		'o', 'O', '0', 't', 'T', '7', 'l', 'L', '1'
 	};
 	char *e = encode;
-
 	for ( ; *s != '\0'; s++)
 	{
-		for ( ; *e != '\0'; *e = *e + 3)
+		for ( ; *e != '\0'; e = e + 3)
 		{
 			if (*s == *e || *s == *(e + 1))
-			{
-				*s == *(e + 2);
-			}
+				*s = *(e + 2);
 		}
+		e = encode;
 	}
 	s = b;
 	return (s);

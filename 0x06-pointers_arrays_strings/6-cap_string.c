@@ -12,7 +12,7 @@ char *cap_string(char *s)
 
 	for ( ; *s != '\0'; s++)
 	{
-		if (s == uc)
+		if (s == uc && *s >= 'a' && *s <= 'z')
 			*s -= 32;
 		else if (*s == 32 || *s == '\t' || *s == '\n' || *s == 44 ||
 				*s == 59 || *s == 46 || *s == 33 || *s == 63

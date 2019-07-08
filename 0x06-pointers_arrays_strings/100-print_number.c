@@ -30,13 +30,13 @@ void print_number(int n)
 			{
 				if (m / i > 0)
 				number_started = 1;
-				if (number_started)
+				if (number_started == 1)
 				{
 					_putchar((m / i % 10) + '0');
 					m = m % i;
 				}
 			}
-			_putchar(rem + '0');
 		}
+		_putchar(rem + '0');
 	}
 }

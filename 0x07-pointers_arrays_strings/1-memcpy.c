@@ -10,6 +10,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	char *start = dest;
 	char *stop = src + n;
+
 	for ( ; start < stop; start++, src++)
 	{
 		*start = *src;

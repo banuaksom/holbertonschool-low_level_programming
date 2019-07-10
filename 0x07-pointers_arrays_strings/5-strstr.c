@@ -7,7 +7,8 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *start = needle;
+	char *start;
+	char *haystack_saver;
 
 	if (*needle == '\0')
 	{
@@ -16,19 +17,21 @@ char *_strstr(char *haystack, char *needle)
 
 	for ( ; *haystack != '\0'; haystack++)
 	{
-		if (*haystack == *needle)
+		for (start = needle; *start != '\0'; start++)
 		{
-			needle = start;
-			for ( ; *needle != '\0'; needle++, haystack++)
+			haystack_saver = haystack;
+			if (*start == *haystack_saver)
 			{
-				if (*needle == *haystack)
-				{
-					return (needle);
-				}
+				haystack_saver++;
+				start++;
 			}
-			if (*needle == '\0')
+			if (*start != *haystack_saver)
 			{
 				break;
+			}
+			if (*start != '\0')
+			{
+				return (haystack);
 			}
 		}
 	}

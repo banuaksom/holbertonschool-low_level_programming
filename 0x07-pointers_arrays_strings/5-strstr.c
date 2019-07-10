@@ -25,10 +25,10 @@ char *_strstr(char *haystack, char *needle)
 				{
 					return (needle);
 				}
-				if (needle == '\0')
-				{
-					break;
-				}
+			}
+			if (*needle == '\0')
+			{
+				break;
 			}
 		}
 	}

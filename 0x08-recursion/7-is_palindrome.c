@@ -18,18 +18,26 @@ int f3(char *s, char *end)
 }
 
 /**
+ * _strlen - computes string length
+ * @s: character to check
+ * Return: int
+ */
+int _strlen(char *s)
+{
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen(s + 1));
+}
+
+/**
  * is_palindrome - checks if a string is a palindrome
  * @s: character to check
  * Return: int
  */
 int is_palindrome(char *s)
 {
-	char *end = s;
+	int len = _strlen(s);
+	char *end = s + len - 1;
 
-	while (*end != '\0')
-	{
-		end++;
-	}
-	end--;
 	return (f3(s, end));
 }

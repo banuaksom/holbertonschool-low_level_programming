@@ -15,10 +15,14 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-
+	if (copy == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < sizeof(str) + 1; i++)
 	{
 		copy[i] = str[i];
 	}
 	return (copy);
+	free(copy);
 }

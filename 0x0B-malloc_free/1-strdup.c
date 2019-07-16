@@ -8,7 +8,7 @@
   */
 char *_strdup(char *str)
 {
-	char *copy = NULL;
+	char *copy;
 	int i;
 	int len = 0;
 
@@ -21,6 +21,10 @@ char *_strdup(char *str)
 		len++;
 	}
 	copy = malloc(len * sizeof(char) + 1);
+	if (copy == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < len; i++)
 	{
 		copy[i] = str[i];

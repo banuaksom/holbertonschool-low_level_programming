@@ -25,7 +25,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	if (ptr == NULL)
 		return (p);
-	for (i = old_size; i < new_size; i++)
+	for (i = 0; i < new_size; i++)
 	{
 		*(p + i) = *((char *)ptr + i);
 	}

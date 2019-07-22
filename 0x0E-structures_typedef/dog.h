@@ -6,7 +6,6 @@
   * @age: struct element
   * @owner: struct element
   */
-int _putchar(char c);
 struct dog
 {
 	char *name;

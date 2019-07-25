@@ -3,7 +3,7 @@
 /**
  * get_op_func - pointer function
  * @s: operator passed as argument to the program
- * Return: pointer to function that corresponds to operator given as a parameter 
+ * Return: pointer to function
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -20,7 +20,9 @@ int (*get_op_func(char *s))(int, int)
 	while (i < 5)
 	{
 		if (ops[i].op[0] == s[0] && strcmp(ops[i].op, s) == 0)
+		{
 			return (ops[i].f);
+		}
 		i++;
 	}
 	return (NULL);

@@ -6,8 +6,7 @@
 void print_number(int n)
 {
 	unsigned int m;
-	int rem, i;
-	int number_started = 0;
+	int rem = 0;
 
 	if (n < 0)
 	{
@@ -26,16 +25,7 @@ void print_number(int n)
 		rem = m % 10;
 		if (m / 10 > 0)
 		{
-			for (i = 1000000000; i >= 10; i = i / 10)
-			{
-				if (m / i > 0)
-				number_started = 1;
-				if (number_started == 1)
-				{
-					_putchar((m / i % 10) + '0');
-					m = m % i;
-				}
-			}
+			print_number(m / 10);
 		}
 		_putchar(rem + '0');
 	}

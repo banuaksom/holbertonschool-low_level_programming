@@ -1,11 +1,10 @@
 #include "lists.h"
-#include "holberton.h"
 /**
  * _strlen - returns the length of a string
  * @s: pointer to string
  * Return: the length of a string
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	unsigned int i;
 

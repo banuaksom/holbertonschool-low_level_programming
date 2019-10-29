@@ -13,8 +13,8 @@ void counting_sort(int *array, size_t size)
 		return;
 	max = max_arr(array, size) + 1;
 
-	sorted  = malloc(sizeof(int) * size);
-	new_array = malloc(sizeof(int) * max);
+	sorted  = calloc(size, sizeof(int));
+	new_array = calloc(max, sizeof(int));
 	for (i = 0; i < size; i++)
 		new_array[array[i]]++;
 	for (i = 1; i < max; i++)

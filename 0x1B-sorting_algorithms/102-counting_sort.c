@@ -6,7 +6,7 @@
  */
 void counting_sort(int *array, size_t size)
 {
-	size_t i, max, k, j;
+	size_t i, max;
 	int *sorted, *new_array;
 
 	if (!array || size < 2)
@@ -22,19 +22,8 @@ void counting_sort(int *array, size_t size)
 	print_array(new_array, max);
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j + 1 < max; j++)
-		{
-			if (new_array[j + 1] != new_array[j])
-			{
-				k = 0;
-				while ((new_array[j + 1] - new_array[j]) - k)
-				{
-					sorted[i] = j + 1;
-					i++;
-					k++;
-				}
-			}
-		}
+		sorted[new_array[array[i]] - 1] = array[i];
+		new_array[array[i]]--;
 	}
 	for (i = 0; i < size; i++)
 		array[i] = sorted[i];

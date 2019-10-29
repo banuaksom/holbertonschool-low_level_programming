@@ -47,11 +47,12 @@ void insertion_sort_list(listint_t **head)
  */
 void delete_node(listint_t *node)
 {
+	listint_t *prev = node->prev;
+	listint_t *next = node->next;
+
 	if (!node)
 		return;
 
-	listint_t *prev = node->prev;
-	listint_t *next = node->next;
 
 	node->next = NULL;
 	node->prev = NULL;

@@ -56,6 +56,7 @@ int partition(int *array, size_t size, int start, int end)
 /**
  * swap_arr - swaps certain array elements and prints
  * @array: pointer to an array
+ * @size: size of the array
  * @i: first index of the element to swap
  * @j: second index of the element to swap
  */

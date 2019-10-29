@@ -47,16 +47,13 @@ void count_sort(int *array, int size, int diviser)
 	new_array = malloc(sizeof(int) * size);
 	for (i = 0; i < size; i++)
 		count[(array[i] / diviser) % 10]++;
-	print_array(count, 10);
 	for (i = 1; i < 10; i++)
 		count[i] += count[i - 1];
-	print_array(count, 10);
 	for (i = size - 1; i >= 0; i--)
 	{
 		new_array[count[(array[i] / diviser) % 10] - 1] = array[i];
 		count[(array[i] / diviser) % 10]--;
 	}
-	print_array(count, 10);
 	for (i = 0; i < size; i++)
 		array[i] = new_array[i];
 	free(new_array);

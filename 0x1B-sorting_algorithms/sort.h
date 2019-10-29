@@ -17,6 +17,9 @@ typedef struct listint_s
 } listint_t;
 void print_array(const int *array, size_t size);
 void swap(int *a, int *b);
+void swap_arr(int *array, size_t size, int i, int j);
+void quicksort(int *array, size_t size, int start, int end);
+int partition(int *array, size_t size, int start, int end);
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
@@ -27,4 +30,7 @@ void counting_sort(int *array, size_t size);
 int max_arr(int *array, size_t size);
 void count_sort(int *array, int size, int diviser);
 void radix_sort(int *array, size_t size);
+void join_arr(int *array, int *new_arr, size_t left, size_t middle, size_t right);
+void divide(int *array, int *new_arr, size_t left, size_t right);
+void merge_sort(int *array, size_t size);
 #endif

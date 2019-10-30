@@ -87,9 +87,9 @@ void bitonic_recursion(int *array, size_t size,
 		bitonic_merge(array, start, count, dir);
 
 		if (dir == 1)
-			printf("Merging [%lu/%lu] (UP):\n", count, size);
+			printf("Result [%lu/%lu] (UP):\n", count, size);
 		if (dir == 0)
-			printf("Merging [%lu/%lu] (DOWN):\n", count, size);
+			printf("Result [%lu/%lu] (DOWN):\n", count, size);
 		print_array(array + start, count);
 	}
 }

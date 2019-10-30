@@ -34,4 +34,6 @@ void join_arr(int *array, int *new_arr, size_t left, size_t middle,
 		size_t right);
 void divide(int *array, int *new_arr, size_t left, size_t right);
 void merge_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
+void heapify(int *array, int end, int start,  size_t size);
 #endif

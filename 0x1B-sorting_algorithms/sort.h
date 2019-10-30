@@ -18,8 +18,11 @@ typedef struct listint_s
 void print_array(const int *array, size_t size);
 void swap(int *a, int *b);
 void swap_arr(int *array, size_t size, int i, int j);
+void pswap(int **array, int idx1, int idx2);
 void quicksort(int *array, size_t size, int start, int end);
 int partition(int *array, size_t size, int start, int end);
+int partition2(int *array, size_t size, size_t startIdx,
+		size_t endIdx);
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
@@ -46,4 +49,8 @@ void bitonic_merge(int *array, size_t start, size_t count, int dir);
 void bitonic_compare(int *array, int idx1, int idx2, size_t dir);
 void swap_arr2(int *array, int i, int j);
 void bitonic_sort(int *array, size_t size);
+void quick_sort_hoare(int *array, size_t size);
+void quick_sort_recurs(int *array, size_t size, size_t startIdx,
+		size_t endIdx);
+
 #endif

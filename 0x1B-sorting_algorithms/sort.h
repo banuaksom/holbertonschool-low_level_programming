@@ -40,7 +40,8 @@ void shell_sort(int *array, size_t size);
 void swap_nodes(listint_t **head, listint_t *node1, listint_t *node2);
 int b_sort(listint_t **head, listint_t **cur, int switch_dir);
 void cocktail_sort_list(listint_t **list);
-void bitonic_recursion(int *array, size_t size, size_t start, size_t count, int dir);
+void bitonic_recursion(int *array, size_t size, size_t start,
+		size_t count, int dir);
 void bitonic_merge(int *array, size_t start, size_t count, int dir);
 void bitonic_compare(int *array, int idx1, int idx2, size_t dir);
 void swap_arr2(int *array, int i, int j);

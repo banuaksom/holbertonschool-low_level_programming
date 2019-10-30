@@ -8,7 +8,7 @@ void insertion_sort_list(listint_t **head)
 	listint_t *cur, *next_cur, *node_insert_after;
 	listint_t *node_insert_before;
 
-	if (!*head || !(*head)->next)
+	if (!head || !*head || !(*head)->next)
 		return;
 	cur = (*head)->next;
 	next_cur = cur->next;

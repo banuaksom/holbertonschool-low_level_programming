@@ -14,10 +14,10 @@
  */
 struct binary_tree_s
 {
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
+	int n;
+	struct binary_tree_s *parent;
+	struct binary_tree_s *left;
+	struct binary_tree_s *right;
 
 };
 /* Basic Binary Tree */
@@ -33,10 +33,24 @@ typedef struct binary_tree_s heap_t;
 /* Print Binary Tree */
 void binary_tree_print(const binary_tree_t *);
 /* Find Ancestor Function */
-binary_tree_t *bt_ancestor(binary_tree_t *root, const binary_tree_t *first, const binary_tree_t *second);
+binary_tree_t *bt_ancestor(
+		binary_tree_t *root,
+		const binary_tree_t *first,
+		const binary_tree_t *second
+		);
+/* Level Order Traversal Function */
+void bt_levelorder(const binary_tree_t *tree, void (*func)(int), int level);
+/* Check BST Function */
+int bt_is_bst(const binary_tree_t *tree, int lower, int higher);
+/* Insert BST Function */
+bst_t *bst_insert_helper(bst_t *tree, int value);
 
 /* Binary Tree Functions */
+<<<<<<< Updated upstream
 /* 0. New node */
+=======
+int bt_height(const binary_tree_t *tree);
+>>>>>>> Stashed changes
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 /* 1. Insert left */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
@@ -75,7 +89,10 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 /* 18. Uncle */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 /* 19. Lowest common ancestor */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
+binary_tree_t *binary_trees_ancestor(
+		const binary_tree_t *first,
+		const binary_tree_t *second
+		);
 /* 20. Level-order traversal */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 /* 21. Is complete */

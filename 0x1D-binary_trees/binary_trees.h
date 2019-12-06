@@ -32,25 +32,20 @@ typedef struct binary_tree_s heap_t;
 /* Helper Functions */
 /* Print Binary Tree */
 void binary_tree_print(const binary_tree_t *);
-/* Find Ancestor Function */
-binary_tree_t *bt_ancestor(
-		binary_tree_t *root,
-		const binary_tree_t *first,
-		const binary_tree_t *second
-		);
+/* Find Node Depth Function */
+size_t node_depth(binary_tree_t *node);
 /* Level Order Traversal Function */
 void bt_levelorder(const binary_tree_t *tree, void (*func)(int), int level);
 /* Check BST Function */
 int bt_is_bst(const binary_tree_t *tree, int lower, int higher);
 /* Insert BST Function */
 bst_t *bst_insert_helper(bst_t *tree, int value);
+/* Check Binary Heap Function */
+int bt_is_heap(const binary_tree_t *tree);
 
 /* Binary Tree Functions */
-<<<<<<< Updated upstream
 /* 0. New node */
-=======
 int bt_height(const binary_tree_t *tree);
->>>>>>> Stashed changes
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 /* 1. Insert left */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
@@ -107,7 +102,7 @@ int binary_tree_is_bst(const binary_tree_t *tree);
 bst_t *bst_insert(bst_t **tree, int value);
 /* 26. BST - Array to BST */
 bst_t *array_to_bst(int *array, size_t size);
-
+int bt_complete(const binary_tree_t *tree, int index, int tree_size);
 bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 int binary_tree_is_avl(const binary_tree_t *tree);

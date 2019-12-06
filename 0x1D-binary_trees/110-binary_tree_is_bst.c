@@ -11,6 +11,8 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	int lower = 0, higher = 0;
 
+	if (!tree)
+		return (0);
 	return (bt_is_bst(tree, lower, higher));
 }
 
@@ -30,6 +32,6 @@ int bt_is_bst(const binary_tree_t *tree, int lower, int higher)
 		return (0);
 	if (higher && tree->n > higher)
 		return (0);
-	return (bt_is_bst(tree->left, lower, tree->n) &&
-			bt_is_bst(tree->right, tree->n, higher));
+	return (bt_is_bst(tree->left, lower, tree->n - 1) &&
+			bt_is_bst(tree->right, tree->n + 1, higher));
 }

@@ -21,11 +21,10 @@ char *leet(char *s)
 	matching['o'] = matching['O'] = '0';
 	matching['t'] = matching['T'] = '7';
 	matching['l'] = matching['L'] = '1';
-
+	// hello
 	for ( ; *s != '\0'; s++)
 	{
-		int encode = *s;
-		*s = matching[encode];
+		*s = matching[(int)*s];
 	}
 	s = b;
 	return (s);

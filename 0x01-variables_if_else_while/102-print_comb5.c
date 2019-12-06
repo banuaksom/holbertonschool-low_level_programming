@@ -17,7 +17,6 @@ int n2;
 int n3;
 int n4;
 
-for (pair1 = 0 ; pair1 <= 99 ; pair1++)
 {
 for (pair2 = pair1 + 1 ; pair2 <= 99 ; pair2++)
 {

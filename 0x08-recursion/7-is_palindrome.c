@@ -22,7 +22,7 @@ int f3(char *s, char *end)
  * @s: character to check
  * Return: int
  */
-int _strlen(char *s)
+into _strlen(char *s)
 {
 	if (*s == '\0')
 		return (0);

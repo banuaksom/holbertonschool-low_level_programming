@@ -9,7 +9,15 @@
 
 int  main(void)
 {
-	printf("50829599\n");
+	int max_prime;
+	int prime;
+	int factor;
+	int number;
+
+
+
+	
+
 	return (0);
 }
 

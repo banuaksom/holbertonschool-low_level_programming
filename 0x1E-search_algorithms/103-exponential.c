@@ -11,13 +11,11 @@ void print_array(int *array, int l, int r)
 	int i;
 
 	printf("Searching in array: ");
-	for (i = l; i <= r; i++)
+	for (i = l; i < r; i++)
 	{
-		printf("%d", array[i]);
-		if (i < r)
-			printf(", ");
+		printf("%d, ", array[i]);
 	}
-	printf("\n");
+	printf("%d\n", array[i]);
 }
 /**
  * binarySearch - searches value in sorted array using Binary search

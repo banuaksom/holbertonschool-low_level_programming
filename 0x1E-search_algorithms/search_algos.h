@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#ifndef min
+#define min(a, b)            (((a) < (b)) ? (a) : (b))
+#endif
 /**
  * struct listint_s - singly linked list
  *
@@ -21,6 +24,8 @@ typedef struct listint_s
 } listint_t;
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
+int binarySearch(int *array, int l, int r, int value);
+void print_array(int *array, int l, int r);
 int jump_search(int *array, size_t size, int value);
 int interpolation_search(int *array, size_t size, int value);
 int exponential_search(int *array, size_t size, int value);
